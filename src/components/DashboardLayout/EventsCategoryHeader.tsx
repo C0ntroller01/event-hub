@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from '../common/Button';
 
 function EventsCategoryHeader() {
     const categoties = [{id: 1, name: "All Events", handleClick: "all-events"}, 
@@ -14,11 +15,13 @@ function EventsCategoryHeader() {
                         {id: 11, name: "Continue Watching", handleClick: "continue-watching"},
                     ]
   return (
-    <div>
+    <div className='flex w-full max-w-full flex-row items-center justify-start overflow-x-auto overscroll-x-contain m-0 scrollbar-none'>
         {categoties.map((category) => (
-            <button key={category.id} onClick={() => category.handleClick} className=" text-black px-2 hover:cursor-pointer mr-2">
+            <Button key={category.id} onClick={() => category.handleClick} className=" text-black px-3 py-2 
+                                    bg-white border-e border-borderGray  whitespace-nowrap
+                                    hover:bg-primary hover:text-white hover:cursor-pointer">
                 {category.name}
-            </button>
+            </Button>
         ))}
     </div>
   )

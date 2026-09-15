@@ -5,7 +5,7 @@ import ProfileStats from './ProfileStats';
 
 function ProfileCard() {
   return (
-    <div className="flex flex-row gap-4 rounded-lg p-10 w-170">
+    <div className="flex w-full max-w-170 min-w-0 flex-col gap-4 rounded-lg p-8 lg:flex-row">
             {/* picture and profile percentage */}
             <div className="flex flex-col items-center justify-center gap-2 border-r border-borderGray pr-4">
               {/* picture */}
@@ -24,7 +24,7 @@ function ProfileCard() {
               </div>
             </div>
             {/* name and details */}
-            <div className="flex flex-col items-start gap-2 pl-4">
+            <div className="flex min-w-0 flex-col items-start gap-2 pl-4">
               <div className="flex flex-col items-start justify-center gap-2">
                 <p className="text-center text-lg font-semibold flex items-center justify-center">
                 Amori Ademakinwa 
@@ -32,7 +32,7 @@ function ProfileCard() {
                 </p>
                 <p className="text-center text-sm text-textGray">@makinwa123</p>
               </div>
-              <div className="flex flex-col items-start justify-center gap-4 w-80">
+              <div className="flex w-full max-w-80 flex-col items-start justify-center gap-4">
                 <ProfileStats title="Posted Events" num={20}/>
                 <ProfileStats title="Following" num={93} className={"bg-green-800"}/>
                 <ProfileStats title="Followers" num={28} className={"bg-gray-600"}/>

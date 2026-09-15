@@ -23,7 +23,7 @@ function SideBarItems() {
     <>  
     {items.map((item: { name: string; icon: React.ReactNode; href: string }) => (
     <NavLink to={item.href} key={item.name} className={({isActive})=>cn("flex items-center gap-2 text-gray-400 px-3 py-2",
-                  "rounded-md cursor-pointer w-full" ,
+                  "rounded-md cursor-pointer w-full whitespace-nowrap" ,
                   "hover:text-white transition-colors ease-in duration-200",
                   isActive && "text-white")}>
         <span>{item.icon} </span>

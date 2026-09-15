@@ -1,10 +1,9 @@
-import React from 'react'
 import {LogOut} from "lucide-react"
 import SideBarItems from '../common/SideBarItems'
 import {Link} from "react-router-dom"
 function Sidebar() {
   return (
-    <aside className="flex flex-col items-center text-sm bg-primary w-64 h-full">
+    <aside className="flex h-full w-55 max-w-full shrink-0 flex-col items-center overflow-x-hidden bg-primary text-sm">
       {/* top */}
       <div className="text-white flex text-xl items-center justify-center py-7 font-bold  w-full">
         EVENT-HUB

@@ -5,17 +5,19 @@ import {Outlet} from "react-router-dom"
 
 function DashboardLayout() {
   return (
-    <div className="flex flex-row w-screen h-screen text-sm ">
+    <div className="flex h-screen w-screen max-w-full flex-row overflow-x-hidden text-sm">
         <hr className="absolute top-20 right-0 left-0 text-gray-400 "/>
-        <Sidebar />
+        <div className="shrink-0">
+          <Sidebar />
+        </div>
         {/* left */}
-        <div className="flex flex-col flex-1 w-full h-full">
+        <div className="flex min-w-0 flex-1 flex-col w-full h-full overflow-x-hidden">
           {/* header content */}
           <header className="h-16 w-full flex items-center px-6 ">
             <Header/>
           </header>
           {/* page content */}
-          <main className="flex-1 p-6">
+          <main className="min-w-0 flex-1 overflow-x-hidden p-6">
             <Outlet/>
           </main>
         </div>

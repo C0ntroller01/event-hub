@@ -4,13 +4,13 @@ import {Link} from "react-router-dom"
 
 function Header() {
   return (
-    <div className="w-full flex justify-between items-center pt-6">
+    <div className="flex w-full min-w-0 flex-wrap items-center justify-between gap-3 pt-6">
         <div className="font-semibold text-gray-500 text-sm ">
             Dashboard
         </div>
-        <div className="flex items-center space-x-4">
-            <Link to="/create-event" className="flex items-center space-x-1 border-r border-r-gray-300 pr-4 text-[#4141A4]">
-                <Plus/>
+        <div className="flex min-w-0 flex-wrap items-center gap-4">
+            <Link to="/create-event" className="flex shrink-0 items-center space-x-1 border-r border-r-gray-300 pr-4 text-primary">
+                <Plus size={16}/>
                 <span>Create new event</span>
             </Link>
             <div className="flex space-x-2">

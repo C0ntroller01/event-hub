@@ -5,9 +5,9 @@ import EventsCategories from "../components/DashboardLayout/EventsCategories";
 
 function Home() {
   return (
-    <div className="flex flex-col  justify-start gap-4 p-10 w-full h-full">
+    <div className="flex min-w-0 max-w-full flex-col justify-start gap-4 overflow-x-hidden scrollbar-none py-4 h-full">
       {/* top */}
-        <div className="flex gap-4 ">
+        <div className="flex max-w-full flex-wrap gap-4">
           {/* profile */}
           <ProfileCard />
           {/* create new event */}
