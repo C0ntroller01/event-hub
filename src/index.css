@@ -2,6 +2,11 @@
 /* =========================
    CSS Reset / Defaults
    ========================= */
+   @theme {
+  --color-primary: #4141A4;
+  --color-borderGray: #d1d5dc;
+  --color-textGray: #4F5E71CC;
+}
 
 * {
   /* margin: 0;

@@ -1,6 +1,7 @@
 import React from 'react'
 import { House, History, Cog, CreditCard, CircleQuestionMark } from "lucide-react"
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
+import { cn } from "../../lib/utils";
 
 
 function SideBarItems() {
@@ -19,14 +20,15 @@ function SideBarItems() {
         {name: "Support", icon: <CircleQuestionMark width={20} height={20}/>,href: "/help"}
     ]
   return (
-    <>
+    <>  
     {items.map((item: { name: string; icon: React.ReactNode; href: string }) => (
-    <Link to={item.href} key={item.name} className="flex items-center gap-2 text-gray-400 px-3 py-2 
-                    rounded-md cursor-pointer w-full hover:text-white transition-colors ease-in duration-200
-                    ">
+    <NavLink to={item.href} key={item.name} className={({isActive})=>cn("flex items-center gap-2 text-gray-400 px-3 py-2",
+                  "rounded-md cursor-pointer w-full" ,
+                  "hover:text-white transition-colors ease-in duration-200",
+                  isActive && "text-white")}>
         <span>{item.icon} </span>
         <span> {item.name} </span>
-    </Link>
+    </NavLink>
     ))}
     </>
   )

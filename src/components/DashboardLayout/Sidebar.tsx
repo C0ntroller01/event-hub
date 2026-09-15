@@ -4,7 +4,7 @@ import SideBarItems from '../common/SideBarItems'
 import {Link} from "react-router-dom"
 function Sidebar() {
   return (
-    <aside className="flex flex-col items-center text-sm bg-[#4141A4] w-64 h-full">
+    <aside className="flex flex-col items-center text-sm bg-primary w-64 h-full">
       {/* top */}
       <div className="text-white flex text-xl items-center justify-center py-7 font-bold  w-full">
         EVENT-HUB
