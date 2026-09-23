@@ -9,7 +9,7 @@ interface ButtonProps {
 function Button({ onClick, children, className }: ButtonProps) {
   return (
     <div>
-        <button onClick={onClick} className={cn(" text-white px-4 py-2 hover:cursor-pointer", className)}>
+        <button onClick={onClick} className={cn(" text-white px-4 py-2 gap-1 hover:cursor-pointer", className)}>
           {children}
         </button>
     </div>
