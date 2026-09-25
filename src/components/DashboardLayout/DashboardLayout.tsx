@@ -13,7 +13,7 @@ function DashboardLayout() {
         {/* left */}
         <div className="flex min-w-0 flex-1 flex-col w-full h-full overflow-x-hidden">
           {/* header content */}
-          <header className="h-16 w-full flex items-center px-6 ">
+          <header className="h-20 w-full flex items-center px-6">
             <Header/>
           </header>
           {/* page content */}

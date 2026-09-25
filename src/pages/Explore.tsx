@@ -3,6 +3,7 @@ import Button from '../components/common/Button';
 import { Settings, SlidersVertical } from 'lucide-react';
 import EventsCarousel from '../components/common/EventsCarousel';
 import EventsCategories from '../components/DashboardLayout/EventsCategories';
+import PageHeader from '../components/common/PageHeader';
 
 function Explore() {
   const events = [
@@ -51,10 +52,10 @@ function Explore() {
     <div className="p-3">
       {/* header */}
       <header  className="flex justify-between items-center mb-4">
-        <div>
-          <h1 className="text-primary font-bold">Explore Events</h1>
-          <h2 className="text-textGray text-xs">View series of events that have been posted for you.</h2>
-        </div>
+        <PageHeader 
+          header="Explore Events" 
+          subheader="View series of events that have been posted for you."
+          />
         <div className="flex gap-2 ">
           <Button className="text-primary flex border-r border-borderGray justify-center items-center">
             <Settings size={16}/>
